@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #E0F7FA, #B2DFDB); /* Light blue gradient */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.title h1 {
+    color: #2F4F4F; /* Dark Slate Gray for text */
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.Temperature-icon {
+    font-size: 60px;
+    color: #008080; /* Teal for the icon */
+    position: absolute;
+    top: -40px;
+    right: -60px;
+}
+
+#celsius, #fahrenheit, #kelvin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+input {
+    flex: 5;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 0 10px;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Different background colors for each input field */
+#celsius input {
+    background-color: #B2DFDB; /* Light teal */
+}
+
+#fahrenheit input {
+    background-color: #FFEBEE; /* Light coral */
+}
+
+#kelvin input {
+    background-color: #FFECB3; /* Light amber */
+}
+
+/* Add focus effect */
+input:focus {
+    border-color: #008080;
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.3);
+}
+
+.icon {
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background: #008080; /* Teal icon background */
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-left: -10px;
+    padding: 0 15px;
+}
+
+.button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button button {
+    padding: 12px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background: #008080; /* Teal button */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button button:hover {
+    background: #006d6d; /* Darker teal */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.button button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
